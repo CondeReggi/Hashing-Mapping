@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagenes/abstract-background-with-black-triangles-realistic-and-3d-illustration-on-red-background-vector.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_padre{
+    display: flex;
+    background: rgba(0, 0, 0, 0.707);
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    position: relative;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff38;
+    width: 300px;
+    height: 450px;
+    margin: auto;
+    border-radius: 40px;
+    align-items: center;
+    justify-content: center;
+    /*display: block;*/
+}
+
+.menu label, input, button{
+    margin: 8px ;
+}
+
+.menu button{
+    background-color: rgb(98, 98, 211);
+    height: 30px;
+    width: 150px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.menu button:hover{
+    background-color: rgb(69, 69, 146);
+}
+
+.menu button:active{
+    background-color: rgb(39, 39, 48);
+    border: 2px solid rgb(24, 8, 48);;
+}
+
+.menu label{
+    color:white;
+    font-weight: 600;
+}
+
+.menu input{
+    text-decoration: none;
+    border-radius: 32px;
+    height: 30px;
+    padding-left: 12px;
+    resize: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.412);
+}
+
+#ingreso_incorrecto{
+    margin-top: 50px;
+    color: red;
+    font-size: 1.2rem;
+    display: none;
+}
+
+#svg_atras{
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px 25px 60px;
+    margin: auto;
+    height: auto;
+    width: 95%;
+    background-color: rgba(255, 255, 255, 0.349);
+    border-radius: 30px;
+    display: none;
+}
+
+.padre_elemento_array , .padre_elemento_array0 , .padre_elemento_array1 , .padre_elemento_array2 , .padre_elemento_array3,
+.padre_elemento_array4 , .padre_elemento_array5, .padre_elemento_array6, .padre_elemento_array7, .padre_elemento_array8, .padre_elemento_array9{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.flecha{
+    clip-path: polygon(63% 39%, 63% 19%, 100% 49%, 63% 81%, 62% 59%, 0% 60%, 0 36%);
+    background-color: rgb(133, 31, 31);
+    height: 60px;
+    width: auto;
+    min-width: 60px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 2px solid black;
+}
+
+.elemento_array, .elemento_array0, .elemento_array1, .elemento_array2, .elemento_array3, .elemento_array4,
+.elemento_array5, .elemento_array6, .elemento_array7, .elemento_array8, .elemento_array9
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 10px;
+    border: 2px solid black;
+    min-width: 60px;
+    height: 60px;
+    animation: fade-out 1s;
+    padding: 12px;
+}
+
+/*-----------------------------------AGREGAR COSAS-----------------------------------------*/
+
+.agregar_cosas{
+    background-color: rgb(175, 160, 160);
+    width: 100%;
+    height: 60px;
+    position: sticky;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.agregar_cosas button{
+    background-color: rgb(98, 98, 211);
+    height: 30px;
+    width: 40px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.agregar_cosas button:hover{
+    background-color: rgb(69, 69, 146);
+}
+
+.agregar_cosas button:active{
+    background-color: rgb(39, 39, 48);
+    border: 2px solid rgb(24, 8, 48);;
+}
+
+
+#boton_buscar{
+    border-radius: 0px 30px 30px 0px;
+}
+
+#boton_ingresar{
+    border-radius: 30px 0px 0px 30px;
+}
+
+#boton_borrar{
+    border-radius: 0 0 0 0;
+}
+
+.agregar_cosas input{
+    text-decoration: none;
+    border-radius: 32px;
+    height: 30px;
+    padding-left: 12px;
+    resize: none;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.412);
+}
+
+/*-------------------------------------VENTANA DE ERROR------------------------------------------*/
+
+.alerta_de_error{
+    margin: auto;
+    position: absolute;
+    background-color: rgb(152, 152, 230);
+    height: 200px;
+    width: 400px;
+    border-radius: 40px;
+    top: 25%;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    display: none;
+}
+
+.alerta_de_error img{
+    height: 50%;
+}
+
+.alerta_de_error button{
+    background-color: rgb(98, 98, 211);
+    border-radius: 30px;
+    height: 30px;
+    width: 150px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.alerta_de_error button:hover{
+    background-color: rgb(69, 69, 146);
+}
+
+.alerta_de_error button:active{
+    background-color: rgb(39, 39, 48);
+    border: 2px solid rgb(24, 8, 48);;
+}
+
+.alerta_de_error .contenido_error{
+    text-align: center;
+}
+
+#ubicacion{
+    position: absolute;
+    color: yellow;
+    font-size: 2rem;
+    top: 15%;
+    right: 150px;
+    font-weight: bold;
+    display: none;
+}

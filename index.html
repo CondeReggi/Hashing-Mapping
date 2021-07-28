@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ESTILOS-->
+    <link rel="stylesheet" href="estilos/styles.css">
+
+    <!--FUENTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+
+    <title>Tabla de Hash</title>
+</head>
+<body>
+    <div class="agregar_cosas">
+            <input id="nombre_ingresar" type="text">
+            <button id="boton_ingresar">I</button>
+            <button id="boton_borrar">D</button>
+            <button id="boton_buscar">S</button>
+    </div>
+    <div class="menu_padre">
+        <img id="svg_atras" src="imagenes/1486485554-37ago-arrow-arrow-left-back-previous-direction-left_81173.svg" alt="">
+        <div class="menu">
+            <label>Numero de elementos:</label>
+            <input id="numero_de_elementos" type="number">
+            <button id="boton_aceptar">ACEPTAR</button>
+
+            <label id="ingreso_incorrecto">INGRESO INCORRECTO</label>
+        </div>
+        <label id="ubicacion">Ejemplo</label>
+        <div class="contenedor">
+            <div class="padre_elemento_array">                       
+            </div>
+        </div>
+    </div>
+    <div class="alerta_de_error">
+        <img src="imagenes/Icon_Error.png" alt="">
+        <div class="contenido_error">
+            <h1>ERROR</h1>
+            <p id="Contenido_Error">Contenido del error</p>
+            <button id="boton_emergente">CERRAR</button>
+        </div>
+    </div>
+    <script src="javascript/crear_tablero.js"></script>
+    <script src="javascript/app.js"></script>
+</body>
+</html>
